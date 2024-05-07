@@ -67,7 +67,6 @@ export class ProductsComponent implements OnInit, OnDestroy {
           if (data.length <= 0) {
             this.isEmptySearchData = true;
           }
-          console.log('mergeMap subscribe next: ', data)
           this.products = data
         },
         error: (error) => {

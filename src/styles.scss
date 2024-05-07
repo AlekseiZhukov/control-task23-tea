@@ -11,30 +11,6 @@ body {
 .section__slider-slide {
   height: 640px;
 }
-/*
-.slick-prev {
-  left: 13px;
-  z-index: 100;
-}
-
-.slick-next {
-  right: 33px;
-  z-index: 100;
-}
-
-.slick-prev:before {
-  content: url("./assets/images/left-arrow.svg");
-}
-
-.slick-next:before {
-  content: url("./assets/images/right-arrow.svg");
-}
-
-.slick-prev:before, .slick-next:before {
-  width: 40px;
-  height: 40px;
-  opacity: 1;
-}*/
 
 .main_content {
   flex-grow: 1;
@@ -165,3 +141,7 @@ body {
   }
 }
 
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

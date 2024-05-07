@@ -21,7 +21,6 @@ export class HeaderComponent implements OnInit {
   }
 
   findTeas() {
-    console.log(this.searchForm.value);
     if (this.searchForm.controls.searchTeas.value) {
       this.searchService.setSearchString(this.searchForm.controls.searchTeas.value);
     } else {

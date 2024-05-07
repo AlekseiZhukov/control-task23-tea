@@ -16,6 +16,8 @@ import { ProductComponent } from './components/pages/product/product.component';
 import { OrderComponent } from './components/pages/order/order.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { PopUpComponent } from './components/common/pop-up/pop-up.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
@@ -37,7 +39,8 @@ import { PopUpComponent } from './components/common/pop-up/pop-up.component';
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        NgbModule,
     ],
   providers: [ProductsService],
   bootstrap: [AppComponent]
