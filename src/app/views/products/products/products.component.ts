@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ProductsService} from "../../../services/products.service";
-import {IProduct} from "../../../types/product.interface";
+import {ProductsService} from "../../../shared/services/products.service";
+import {IProduct} from "../../../../types/product.interface";
 import {mergeMap, Observable, Subscription, tap} from "rxjs";
 import {ActivatedRoute, Router} from "@angular/router";
-import {SearchService} from "../../../services/search.service";
+import {SearchService} from "../../../core/services/search.service";
 
 @Component({
   selector: 'products-component',

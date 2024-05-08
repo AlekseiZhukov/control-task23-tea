@@ -2,8 +2,8 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Observable, Subscription, tap} from "rxjs";
 import {FormBuilder, Validators} from "@angular/forms";
-import {CustomValidators} from "../../../shared/custom-validators";
-import {ProductsService} from "../../../services/products.service";
+import {CustomValidators} from "../../shared/custom-validators/custom-validators";
+import {ProductsService} from "../../shared/services/products.service";
 
 @Component({
   selector: 'order-component',
@@ -11,11 +11,6 @@ import {ProductsService} from "../../../services/products.service";
   styleUrls: ['./order.component.scss']
 })
 export class OrderComponent implements OnInit, OnDestroy {
-/*  private subscription: Subscription | null = null;
-  private subscriptionOrder: Subscription | null = null;
-  private subscriptionValidForm: Subscription | null = null;
-
-  private subscriptionError: Subscription | null = null;*/
   private subscription: Subscription = new Subscription();
   private observableError: Observable<boolean>;
 
@@ -94,9 +89,6 @@ export class OrderComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
-/*    this.subscriptionOrder?.unsubscribe();
-    this.subscriptionValidForm?.unsubscribe();
-    this.subscriptionError?.unsubscribe();*/
   }
 
   sentOrder() {

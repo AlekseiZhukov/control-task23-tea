@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
-import {IProduct} from "../types/product.interface";
+import {IProduct} from "../../../types/product.interface";
 import {map, Observable,
 } from "rxjs";
-import {IOrder} from "../types/order.interface";
+import {IOrder} from "../../../types/order.interface";
 
-@Injectable()
+@Injectable({providedIn: 'root'} )
 export class ProductsService {
 
   constructor(private http: HttpClient) { }

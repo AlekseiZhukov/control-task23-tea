@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IProduct} from "../../../types/product.interface";
+import {IProduct} from "../../../../types/product.interface";
 
 @Component({
   selector: 'tea-card',

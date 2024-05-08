@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder} from "@angular/forms";
 import {Router} from "@angular/router";
-import {SearchService} from "../../../services/search.service";
+import {SearchService} from "../../../core/services/search.service";
 
 @Component({
   selector: 'header-component',

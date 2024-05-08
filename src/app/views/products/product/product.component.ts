@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {IProduct} from "../../../types/product.interface";
-import {ProductsService} from "../../../services/products.service";
+import {IProduct} from "../../../../types/product.interface";
+import {ProductsService} from "../../../shared/services/products.service";
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import {empty, mergeMap, Observable, of, scheduled, Subscription} from "rxjs";
 
