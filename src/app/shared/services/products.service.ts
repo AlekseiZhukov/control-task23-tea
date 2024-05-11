@@ -4,6 +4,7 @@ import {IProduct} from "../../../types/product.interface";
 import {map, Observable,
 } from "rxjs";
 import {IOrder} from "../../../types/order.interface";
+import {environment} from "../../../environments/environment";
 
 @Injectable({providedIn: 'root'} )
 export class ProductsService {
@@ -15,7 +16,7 @@ export class ProductsService {
     if (searchString) {
       params = params.append('search', searchString);
     }
-    return this.http.get<IProduct[]>('https://testologia.ru/tea', {params})
+    return this.http.get<IProduct[]>(environment.apiURL + 'tea', {params})
       .pipe(
         map( products => {
           if (Array.isArray(products)) {
@@ -27,10 +28,10 @@ export class ProductsService {
   }
 
   getProduct(id: number): Observable<IProduct> {
-    return this.http.get<IProduct>(`https://testologia.ru/tea?id=${id}`)
+    return this.http.get<IProduct>(`${environment.apiURL}tea?id=${id}`)
   }
 
   createOrder(data: IOrder): Observable<{success: number, message?: string}> {
-    return this.http.post<{success: number, message?: string}>(`https://testologia.ru/order-tea`, data);
+    return this.http.post<{success: number, message?: string}>(environment.apiURL + `order-tea`, data);
   }
 }
