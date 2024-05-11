@@ -8,7 +8,8 @@ import {TeaCardComponent} from "./components/tea-card/tea-card.component";
 import {ShortenTextPipe} from "./pipes/shorten-text.pipe";
 import {RouterModule} from "@angular/router";
 import {ReactiveFormsModule} from "@angular/forms";
-
+import {NgbModalModule} from "@ng-bootstrap/ng-bootstrap";
+import {NgbModalPopup} from "./components/ngb-popup/ngb-popup.component";
 
 
 @NgModule({
@@ -19,11 +20,13 @@ import {ReactiveFormsModule} from "@angular/forms";
     PopUpComponent,
     TeaCardComponent,
     ShortenTextPipe,
+    NgbModalPopup
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    NgbModalModule
   ],
   exports: [
     FooterComponent,
@@ -32,6 +35,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     PopUpComponent,
     TeaCardComponent,
     ShortenTextPipe,
+    NgbModalPopup
   ]
 })
 export class SharedModule { }
